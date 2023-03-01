@@ -19,6 +19,15 @@ def configparse(section):
         return config['speedtest']
 
 if __name__ == '__main__':
+    
+    try:
+        print('Downloading Country.mmdb...')
+        urllib.request.urlretrieve('https://raw.githubusercontent.com/Loyalsoldier/geoip/release/Country.mmdb', './utils/Country.mmdb')
+        print('Success!\n')
+    except Exception:
+        print('Failed!\n')
+        pass
+
 
     if configparse('common').getboolean('update_enabled'):
         config = configparse('common')
