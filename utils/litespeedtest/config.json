@@ -1,0 +1,15 @@
+{
+    "group": "FreeProxies",
+    "speedtestMode": "all",
+    "pingMethod": "googleping",
+    "sortMethod": "rspeed",
+    "concurrency": 16,
+    "testMode": 2,
+    "subscription": "../../temp",
+    "timeout": 8,
+    "language": "en",
+    "fontSize": 24,
+    "theme": "rainbow",
+    "generatePicMode": 0,
+    "outputRange": "50"
+}
