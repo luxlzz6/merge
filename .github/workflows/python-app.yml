@@ -49,7 +49,7 @@ jobs:
         git commit -m "$(date '+%Y-%m-%d %H:%M:%S')合并节点"
         git push --force
     - name: 推送更改
-      uses:  ad-m/github-push-action@master
+      uses:  ad-m/github-push-action@main
       with:
          github_token: ${{ secrets.TOKEN }}
          #branch: master
