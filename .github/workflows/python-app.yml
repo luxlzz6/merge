@@ -1,34 +1,4 @@
 
-Skip to content
-Pull requests
-Issues
-Codespaces
-Marketplace
-Explore
-@luxl-1379
-ykk648 /
--TopFreeProxies
-Public
-
-Fork your own copy of ykk648/-TopFreeProxies
-
-Code
-Issues
-Pull requests
-Actions
-Projects
-Security
-
-    Insights
-
-Beta Try the new code view
--TopFreeProxies/.github/workflows/merge.yml
-@ykk648
-ykk648 orphan
-Latest commit ffbf4fb Feb 8, 2023
-History
-1 contributor
-53 lines (48 sloc) 1.53 KB
 name: sub_merge
 
 # 触发条件
@@ -81,21 +51,4 @@ jobs:
       uses:  ad-m/github-push-action@main
       with:
         branch: main
-Footer
-© 2023 GitHub, Inc.
-Footer navigation
 
-    Terms
-    Privacy
-    Security
-    Status
-    Docs
-    Contact GitHub
-    Pricing
-    API
-    Training
-    Blog
-    About
-
--TopFreeProxies/merge.yml at master · ykk648/-TopFreeProxies
-x1.00
