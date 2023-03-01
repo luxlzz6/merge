@@ -45,12 +45,12 @@ jobs:
         git pull origin master
         git add ./sub/*
         git add ./utils/Country.mmdb
-        git checkout main
+        git checkout master
         git commit -m "$(date '+%Y-%m-%d %H:%M:%S')合并节点"
         git push --force
     - name: 推送更改
       uses:  ad-m/github-push-action@master
       with:
          #github_token: ${{ secrets.TOKEN }}
-         branch: main
+         branch: master
 
