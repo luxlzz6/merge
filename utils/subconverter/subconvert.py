@@ -28,7 +28,7 @@ def convert(subscription,target,other_config={}):
     config = default_config
     
     work_dir = os.getcwd()
-    os.chdir('/home/python/TopFreeProxies/utils/subconverter')
+    os.chdir(os.path.dirname(os.path.abspath(__file__)))
     
     if subscription[:8] == 'https://':
         clash_provider = subconverterhandler(subscription)
