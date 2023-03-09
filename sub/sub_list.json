@@ -16,14 +16,6 @@
     "enabled": false
   },
   {
-    "id": 2,
-    "remarks": "xiyaowong/freeFQ",
-    "site": "https://github.com/xiyaowong/freeFQ",
-    "url": "https://raw.githubusercontent.com/xiyaowong/freeFQ/main/v2ray",
-    "update_method": "auto",
-    "enabled": true
-  },
-  {
     "id": 3,
     "remarks": "freefq/free",
     "site": "https://github.com/freefq/free",
