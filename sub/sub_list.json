@@ -8,14 +8,6 @@
     "enabled": true
   },
   {
-    "id": 1,
-    "remarks": "chfchf0306/clash",
-    "site": "https://github.com/chfchf0306/clash",
-    "url": "https://raw.githubusercontent.com/chfchf0306/jeidian4.18/main/4.18",
-    "update_method": "auto",
-    "enabled": false
-  },
-  {
     "id": 3,
     "remarks": "freefq/free",
     "site": "https://github.com/freefq/free",
@@ -32,30 +24,6 @@
     "enabled": true
   },
   {
-    "id": 5,
-    "remarks": "vpei/Free-Node-Merge",
-    "site": "https://github.com/vpei/Free-Node-Merge",
-    "url": "https://raw.githubusercontent.com/vpei/Free-Node-Merge/main/out/node.txt",
-    "update_method": "auto",
-    "enabled": true
-  },
-  {
-    "id": 6,
-    "remarks": "colatiger/v2ray-nodes",
-    "site": "https://github.com/colatiger/v2ray-nodes",
-    "url": "https://bitbucket.org/huwo1/proxy_nodes/raw/b90856fe7cb9c666223f3ad41c87d0e60c711590/proxy.md",
-    "update_method": "auto",
-    "enabled": true
-  },
-  {
-    "id": 7,
-    "remarks": "oslook/clash-freenode",
-    "site": "https://github.com/oslook/clash-freenode",
-    "url": "https://raw.githubusercontent.com/oslook/clash-freenode/main/clash.yaml",
-    "update_method": "auto",
-    "enabled": true
-  },
-  {
     "id": 8,
     "remarks": "ssrsub/ssr",
     "site": "https://github.com/ssrsub/ssr",
@@ -64,108 +32,12 @@
     "enabled": true
   },
   {
-    "id": 9,
-    "remarks": "Leon406/SubCrawler",
-    "site": "https://github.com/Leon406/SubCrawler",
-    "url": "https://raw.githubusercontent.com/Leon406/SubCrawler/main/sub/share/v2",
-    "update_method": "auto",
-    "enabled": true
-  },
-  {
-    "id": 10,
-    "remarks": "yu-steven/openit",
-    "site": "https://github.com/yu-steven/openit",
-    "url": "https://raw.githubusercontent.com/yu-steven/openit/main/Clash.yaml",
-    "update_method": "auto",
-    "enabled": true
-  },
-  {
-    "id": 11,
-    "remarks": "Jason6111/TopFreeProxies",
-    "site": "https://github.com/Jason6111/TopFreeProxies",
-    "url": "https://raw.githubusercontent.com/Jason6111/TopFreeProxies/main/Eternity",
-    "update_method": "auto",
-    "enabled": true
-  },
-  {
-    "id": 12,
-    "remarks": "iwxf/free-v2ray",
-    "site": "https://github.com/iwxf/free-v2ray",
-    "url": "https://raw.githubusercontent.com/iwxf/free-v2ray/master/index.html",
-    "update_method": "auto",
-    "enabled": false
-  },
-  {
-    "id": 13,
-    "remarks": "ldir92664/Vmess-Actions",
-    "site": "https://github.com/ldir92664/Vmess-Actions",
-    "url": "https://raw.githubusercontent.com/ldir92664/Vmess-Actions/main/subscribe/clash.yml|https://raw.githubusercontent.com/ldir92664/Vmess-Actions/main/subscribe/clash-bihai.yml",
-    "update_method": "auto",
-    "enabled": false
-  },
-  {
-    "id": 14,
-    "remarks": "gooooooooooooogle/Clash-Config",
-    "site": "https://github.com/gooooooooooooogle/Clash-Config",
-    "url": "https://raw.githubusercontent.com/gooooooooooooogle/Clash-Config/main/Clash.yaml",
-    "update_method": "auto",
-    "enabled": false
-  },
-  {
     "id": 15,
     "remarks": "Jsnzkpg/Jsnzkpg",
     "site": "https://github.com/Jsnzkpg/Jsnzkpg",
     "url": "https://raw.githubusercontent.com/Jsnzkpg/Jsnzkpg/Jsnzkpg/Jsnzkpg",
     "update_method": "auto",
     "enabled": true
-  },
-  {
-    "id": 16,
-    "remarks": "ermaozi/get_subscribe",
-    "site": "https://github.com/ermaozi/get_subscribe",
-    "url": "https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/clash.yml",
-    "update_method": "auto",
-    "enabled": true
-  },
-  {
-    "id": 17,
-    "remarks": "wrfree/free",
-    "site": "https://github.com/wrfree/free",
-    "url": "https://raw.githubusercontent.com/wrfree/free/main/v2",
-    "update_method": "auto",
-    "enabled": true
-  },
-  {
-    "id": 18,
-    "remarks": "GreenFishStudio/GreenFish",
-    "site": "https://github.com/GreenFishStudio/GreenFish",
-    "url": "https://raw.githubusercontent.com/GreenFishStudio/GreenFish/master/Subscription/GreenFishYYDS",
-    "update_method": "auto",
-    "enabled": false
-  },
-  {
-    "id": 19,
-    "remarks": "ObcbO/auto-subscribe",
-    "site": "https://github.com/ObcbO/auto-subscribe",
-    "url": "https://raw.githubusercontent.com/ObcbO/auto-subscribe/main/subscribe/v2ray.txt",
-    "update_method": "auto",
-    "enabled": false
-  },
-  {
-    "id": 20,
-    "remarks": "Jinxnet 节点池",
-    "site": "https://pool.jinxnet.xyz",
-    "url": "https://pool.jinxnet.xyz/clash/proxies",
-    "update_method": "auto",
-    "enabled": false
-  },
-  {
-    "id": 21,
-    "remarks": "tomdegnan/clashrule",
-    "site": "https://github.com/tomdegnan/clashrule",
-    "url": "https://raw.githubusercontent.com/tomdegnan/clashrule/master/lava",
-    "update_method": "auto",
-    "enabled": false
   },
   {
     "id": 22,
@@ -200,22 +72,6 @@
     "enabled": true
   },
   {
-    "id": 26,
-    "remarks": "KYLELI1991/sysucc",
-    "site": "https://github.com/KYLELI1991/sysucc",
-    "url": "https://raw.githubusercontent.com/KYLELI1991/sysucc/main/Temp",
-    "update_method": "auto",
-    "enabled": false
-  },
-  {
-    "id": 27,
-    "remarks": "mhmhone/shadowrocket-free-subscribe",
-    "site": "https://github.com/mhmhone/shadowrocket-free-subscribe",
-    "url": "https://bulink.me/sub/m5aep/cl",
-    "update_method": "auto",
-    "enabled": true
-  },
-  {
     "id": 28,
     "remarks": "aiboboxx/v2rayfree",
     "site": "https://github.com/aiboboxx/v2rayfree",
@@ -224,34 +80,10 @@
     "enabled": true
   },
   {
-    "id": 29,
-    "remarks": "moneyfly1/sublist",
-    "site": "https://github.com/moneyfly1/sublist",
-    "url": "https://raw.githubusercontent.com/moneyfly1/sublist/main/clash.yml",
-    "update_method": "auto",
-    "enabled": false
-  },
-  {
     "id": 30,
     "remarks": "poduv/poduv",
     "site": "https://github.com/poduv/poduv",
-    "url": "https://raw.githubusercontent.com/poduv/poduv/i/long",
-    "update_method": "auto",
-    "enabled": false
-  },
-  {
-    "id": 31,
-    "remarks": "ok1991/v2ray",
-    "site": "https://github.com/ok1991/v2ray",
-    "url": "https://topvpn.team/github/t.list",
-    "update_method": "auto",
-    "enabled": false
-  },
-  {
-    "id": 32,
-    "remarks": "parkerpa/jsfxs",
-    "site": "https://github.com/parkerpa/jsfxs",
-    "url": "https://raw.githubusercontent.com/parkerpa/jsfxs/main/clash",
+    "url": "https://raw.githubusercontent.com/poduv/poduv/k/base64",
     "update_method": "auto",
     "enabled": false
   },
@@ -259,40 +91,8 @@
     "id": 33,
     "remarks": "Pawdroid/Free-servers",
     "site": "https://github.com/Pawdroid/Free-servers",
-    "url": "https://shadowshare.v2cross.com/publicserver/servers/temp/6etNgGmDo0kilQJq",
+    "url": "https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub",
     "update_method": "page_release",
-    "enabled": true
-  },
-  {
-    "id": 34,
-    "remarks": "songkaik/Sub",
-    "site": "https://github.com/songkaik/Sub",
-    "url": "https://raw.githubusercontent.com/songkaik/Sub/main/v2rayN",
-    "update_method": "auto",
-    "enabled": false
-  },
-  {
-    "id": 35,
-    "remarks": "kxswa/k",
-    "site": "https://github.com/kxswa/k",
-    "url": "https://raw.githubusercontent.com/kxswa/k/k/v2ray",
-    "update_method": "auto",
-    "enabled": true
-  },
-  {
-    "id": 36,
-    "remarks": "Nodefree.org",
-    "site": "https://github.com/Fukki-Z/nodefree",
-    "url": "https://nodefree.org/dy/202212/20221231.txt",
-    "update_method": "change_date",
-    "enabled": true
-  },
-  {
-    "id": 37,
-    "remarks": "Rokate/Proxy-Sub",
-    "site": "https://github.com/Rokate/Proxy-Sub",
-    "url": "https://raw.githubusercontent.com/Rokate/Proxy-Sub/main/clash/clash_ssr.yml|https://raw.githubusercontent.com/Rokate/Proxy-Sub/main/clash/clash_v2ray.yml|https://raw.githubusercontent.com/Rokate/Proxy-Sub/main/clash/clash_trojan.yml",
-    "update_method": "auto",
     "enabled": true
   },
   {
@@ -321,17 +121,9 @@
   },
   {
     "id": 41,
-    "remarks": "vveg26/get_proxy",
-    "site": "https://github.com/vveg26/get_proxy",
-    "url": "https://raw.githubusercontent.com/vveg26/get_proxy/main/dist/clash.config.yaml",
-    "update_method": "auto",
-    "enabled": true
-  },
-  {
-    "id": 42,
-    "remarks": "RenaLio/Mux2sub",
-    "site": "https://github.com/RenaLio/Mux2sub",
-    "url": "https://fastestcloud.xyz/api/v1/client/subscribe?token=fe8cd953bfba1419a46f5d401872a344|https://feiniaoyun.xyz/api/v1/client/subscribe?token=ef47e81bbf3b00b92062a44a73643813|https://feiniaoyun.xyz/api/v1/client/subscribe?token=860881a1cb78f93fa5e650c20465012b|https://random1sub.milocloud.xyz/link/iTFIZHfDFjgtOhut?sub=3|https://bigairport.date/api/v1/client/subscribe?token=1d13e767fc91e01161c37768eb5502f9|https://www.jafiyun2023.buzz/link/uaRrw6lADPFGeA8l?clash=1|https://random1sub.milocloud.xyz/link/jXNuQSo1NWCHxf8a?sub=3|https://yjssub.pro/link/ef0sO7grbYL89e1W?clash=1|https://fastestcloud.xyz/api/v1/client/subscribe?token=9f40efc5d42e42738f6e53f8f07a6ddf|https://www.ckcloud.xyz/api/v1/client/subscribe?token=12da195d1f2f70e18405b90a8ffb7266|https://fastestcloud.xyz/api/v1/client/subscribe?token=d83cbc94051f1be3dbfba7bcdc450c5a|https://www.ckcloud.xyz/api/v1/client/subscribe?token=26ec94228a713b3c0572550a208c60b6|https://cxsub.club/link/45T0CxirxIDdrcA7?clash=1|https://cdn-01.example.help.cn.faster.aliyuncdn.life/link/41zkdjpshpgy2Q2M?clash=1|https://lting.cyou/link/LQ1yct3fLDvBtTPJ?clash=1|https://www.ckcloud.xyz/api/v1/client/subscribe?token=ed3512beed0c2b32c0a9ffa49675073d|https://feiniaoyun.xyz/api/v1/client/subscribe?token=e9d22da4a4489e67435a3084ba9b3cb3|https://lting.cyou/link/rDQGSebiHJDXd807?clash=1|https://cdn-01.example.help.cn.faster.aliyuncdn.life/link/AuXWXze1FM57BybI?clash=1|https://www.ckcloud.xyz/api/v1/client/subscribe?token=34b10ca1d236fb804e1b07a047f6c62c|https://yjssub.pro/link/WZNvrIsmGvf8mrLR?clash=1|https://cxsub.club/link/FhT1sruajBV5awv9?clash=1|http://subs.202218.xyz/link/ru8zcNXSSBgtYulk?clash=1|https://cdn-01.example.help.cn.faster.aliyuncdn.life/link/A9YkKXxaG5lpwppb?clash=1|https://fastestcloud.xyz/api/v1/client/subscribe?token=fdbeff27161f5df0197b7b3b40e97770|https://www.jafiyun2023.buzz/link/QlcL37gWyn9XczIY?clash=1|https://feiniaoyun.xyz/api/v1/client/subscribe?token=67ca993b4961430b3e95b53a760efdf0|http://subs.202218.xyz/link/6N5KbMWCHEpeugNX?clash=1|https://dy.xiaozhupeiqix.com/link/kzJhUb9jzfoiqKNG?clash=1|https://dy.xiaozhupeiqix.com/link/nMZBcRoojwEx4WAK?clash=1|https://cdn-01.example.help.cn.faster.aliyuncdn.life/link/QNa4wOLvkiykSXVn?clash=1",
+    "remarks": "luxl-1379",
+    "site": "https://github.com/luxl-1379/tg/blob/master/sub",
+    "url": "https://raw.githubusercontent.com/luxl-1379/tg/master/sub/tg",
     "update_method": "auto",
     "enabled": true
   }
