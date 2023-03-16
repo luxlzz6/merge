@@ -119,6 +119,7 @@ def subconverterhandler(subscription,
     subconverter.wait()
     # Print log
     pre_run = False
+    print(logs)
     for line in logs:
         if 'Fetching node data from url' in line and '\'./temp\'' not in line:
             pre_run = True
@@ -215,7 +216,6 @@ def deduplicate(clash_provider,
                 except Exception:
                     pass
         fix_provider = '\n'.join(line_fixed)
-        print(fix_provider)
 
         try:
             proxies = yaml.safe_load(fix_provider)['proxies']
