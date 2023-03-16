@@ -274,7 +274,7 @@ def deduplicate(clash_provider,keep_nodes=1): # Proxies deduplicate. If proxies 
 		else:
 			item_name = '其他'
         item['name'] = item_name
-    
+    print(proxies)
     output = yaml.dump({'proxies': proxies}, default_flow_style=False, sort_keys=False, allow_unicode=True, indent=2)
     return output
 
