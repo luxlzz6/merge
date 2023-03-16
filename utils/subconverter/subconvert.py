@@ -342,7 +342,10 @@ def resolve_address(address):
 def name(servers):
     proxies=[]
     for server in servers:
-        add_list = servers[server][:keep_nodes]
+        try:
+            add_list = servers[server][:keep_nodes]
+        except Exception:
+            add_list = servers[server]
         for x in add_list:
             item_name = str(x['name'])
             se = str(x['server'])
