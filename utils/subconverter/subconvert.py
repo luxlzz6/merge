@@ -244,11 +244,27 @@ def deduplicate(clash_provider,
             servers[ip] = [proxy]  # init remote server list, add first proxy
 
     proxies = []
-    proxies = name(servers)
-    print(f'Dedupicate success, remove {len(lines) - len(proxies)} duplicate proxies')
+    for server in servers:
+        # if len(servers[server]) > 3: # if proxy amount is greater than 4 then just add 4 proxies
+        #     add_list = servers[server][:3]
+        #     for add in add_list:
+        #         proxies.append(add)
+        # else:
+        #     add_list = servers[server] # if proxy amount is less than 4 then add all proxies
+        #     for add in add_list:
+        #         proxies.append(add)
+        try:
+            add_list = servers[server][:keep_nodes]
+        except Exception:
+            add_list = servers[server]
+        for x in add_list:
+            proxies.append(x)
+    print(f'Dedupicate success, remove {len(lines)-len(proxies)} duplicate proxies')
     print(f'Output amount: {len(proxies)}')
+    proxie = []
+    proxie = name(proxies)
 
-    output = yaml.dump({'proxies': proxies}, default_flow_style=False, sort_keys=False, allow_unicode=True, indent=2)
+    output = yaml.dump({'proxies': proxie}, default_flow_style=False, sort_keys=False, allow_unicode=True, indent=2)
     return output
 mapping = {'AD': '安道尔', 'AE': '阿联酋', 'AF': '阿富汗', 'AG': '安提瓜和巴布达',
            'AI': '安圭拉', 'AL': '阿尔巴尼亚', 'AM': '亚美尼亚', 'AO': '安哥拉',
