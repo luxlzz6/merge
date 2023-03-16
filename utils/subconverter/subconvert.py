@@ -297,7 +297,6 @@ def deduplicate(clash_provider,
             servers[ip] = [proxy] # init remote server list, add first proxy
    
     proxies = []
-    print(servers)
     for server in servers:
         try:
             add_list = servers[server][:keep_nodes]
