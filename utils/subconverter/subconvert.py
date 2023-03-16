@@ -266,14 +266,14 @@ def deduplicate(clash_provider,keep_nodes=1): # Proxies deduplicate. If proxies 
 			 'AU':'澳大利亚','澳':'澳大利亚',
 			 'RU':'俄罗斯','俄':'俄罗斯','RELAY':'其他','NOWHERE':'未知' }
     for item in proxies:
-        item_name = item['name']
-		for k, v in mapping.items():
-			if k in item_name:
-				item_name = v
-				break
-		else:
-			item_name = '其他'
-        item['name'] = item_name
+	item_name = item['name']
+	for k, v in mapping.items():
+	    if k in item_name:
+		item_name = v
+		break
+	else:
+	    item_name = '其他'
+	item['name'] = item_name
     print(proxies)
     output = yaml.dump({'proxies': proxies}, default_flow_style=False, sort_keys=False, allow_unicode=True, indent=2)
     return output
