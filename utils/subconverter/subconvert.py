@@ -310,7 +310,7 @@ def deduplicate(clash_provider,
         except Exception:
             add_list = servers[server]
         for x in add_list:        
-            item_name = str(item['name'])
+            item_name = str(x['name'])
             server = resolve_address(str(x['server']))
             ip_address = socket.gethostbyname(server)
             ip = str(ip_address)
