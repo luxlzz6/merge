@@ -278,7 +278,6 @@ def deduplicate(clash_provider,
         for k, v in mapping.items():
             if k in item_name:
                 item_name = v
-                break
         else:
             item_name = '其他'
         item['name'] = item_name
