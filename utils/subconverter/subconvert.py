@@ -228,7 +228,6 @@ def deduplicate(clash_provider,
             return output
 
     servers = {}
-    print(proxies)
     for proxy in proxies:
         server = proxy['server']  # assign remote server
         if server.replace('.', '').isdigit():
@@ -343,7 +342,7 @@ def name(servers):
         try:
             add_list = servers[server][:keep_nodes]
         except Exception:
-            add_list = servers[server]
+            add_list[server] = [servers]
         for x in add_list:
             item_name = str(x['name'])
             se = str(x['server'])
