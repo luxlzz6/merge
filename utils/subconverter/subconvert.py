@@ -254,6 +254,8 @@ def deduplicate(clash_provider,
         except Exception:
             add_list = servers[server]
         for x in add_list:
+            print(x)
+            print('测试')
             proxies.append(x)
     print(f'Dedupicate success, remove {len(lines) - len(proxies)} duplicate proxies')
     print(f'Output amount: {len(proxies)}')
