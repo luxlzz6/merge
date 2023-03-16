@@ -64,6 +64,7 @@ class merge():
                     file.write(content)
 
         print('Merging nodes...\n')
+        print(''.join(content_list))
 
         content = convert(''.join(content_list),'url',self.format_config)
         content_clash = convert(''.join(content_list),'clash_provider',self.format_config)
