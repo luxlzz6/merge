@@ -215,6 +215,7 @@ def deduplicate(clash_provider,
                 except Exception:
                     pass
         fix_provider = '\n'.join(line_fixed)
+        print(fix_provider)
 
         try:
             proxies = yaml.safe_load(fix_provider)['proxies']
