@@ -1,4 +1,4 @@
-name: ww
+name: sub_merge
 
 # 触发条件
 on:
@@ -36,5 +36,21 @@ jobs:
         wget -O subconverter.tar.gz https://github.com/tindy2013/subconverter/releases/latest/download/subconverter_linux64.tar.gz
         tar -zxvf subconverter.tar.gz -C ./
         chmod +x ./subconverter/subconverter && nohup ./subconverter/subconverter >./subconverter.log 2>&1 &
-        python ./utils/main.py
+        python ./utils/me.py
       
+    - name: 提交更改
+      run: |                 
+        git config --local user.email "actions@github.com"
+        git config --local user.name "GitHub Actions"
+        git pull origin master
+        git add ./sub/*
+        git add ./utils/Country.mmdb
+        git checkout master
+        git commit -m "$(date '+%Y-%m-%d %H:%M:%S')合并节点"
+        git push --force
+    - name: 推送更改
+      uses:  ad-m/github-push-action@master
+      with:
+         #github_token: ${{ secrets.TOKEN }}
+         branch: master
+
