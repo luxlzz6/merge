@@ -305,6 +305,8 @@ def deduplicate(clash_provider,
     return output
 def name(servers):
     for server in servers:
+	try:
+            add_list = servers[server][:keep_nodes]
         except Exception:
             add_list = servers[server]
         for x in add_list:        
