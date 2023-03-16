@@ -296,40 +296,39 @@ def deduplicate(clash_provider,
 		'ZA': '南非', 'ZM': '赞比亚', 'ZW': '津巴布韦',
 		 'RELAY':'其他','None':'未知' }
     proxies = []
-    for server in servers:
-        # if len(servers[server]) > 3: # if proxy amount is greater than 4 then just add 4 proxies
-        #     add_list = servers[server][:3]
-        #     for add in add_list:
-        #         proxies.append(add)
-        # else:
-        #     add_list = servers[server] # if proxy amount is less than 4 then add all proxies
-        #     for add in add_list:
-        #         proxies.append(add)
-        try:
-            add_list = servers[server][:keep_nodes]
-        except Exception:
-            add_list = servers[server]
-        for x in add_list:        
-            item_name = str(x['name'])
-            server = resolve_address(str(x['server']))
-            ip_address = socket.gethostbyname(server)
-            ip = str(ip_address)
-            print(ip)
-            ip_name = get_location(ip) 
-            for k, v in mapping.items():
-                if k in ip_name:
-                    item_name = v
-                    break
-            else:
-                item_name = '其他'
-            x['name'] = item_name
-            proxies.append(x)
+    proxies = name(servers)
     print(f'Dedupicate success, remove {len(lines) - len(proxies)} duplicate proxies')
     print(f'Output amount: {len(proxies)}')
     print(proxies)
 
     output = yaml.dump({'proxies': proxies}, default_flow_style=False, sort_keys=False, allow_unicode=True, indent=2)
     return output
+def name(servers):
+    for server in servers:
+        try:
+        add_list = servers[server][:keep_nodes]
+        except Exception:
+        add_list = servers[server]
+        for x in add_list:        
+        item_name = str(x['name'])
+        server = resolve_address(str(x['server']))
+        ip_address = socket.gethostbyname(server)
+        ip = str(ip_address)
+        print(ip)
+        ip_name = get_location(ip) 
+        for k, v in mapping.items():
+            if k in ip_name:
+            item_name = v
+            break
+        else:
+            item_name = '其他'
+        x['name'] = item_name
+        proxies.append(x)
+    return proxies
+        
+        
+ 
+ 
 
 
 def get_location(ip_address):
