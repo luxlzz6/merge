@@ -274,7 +274,7 @@ def deduplicate(clash_provider,
                     break
             else:
                 item_name = '其他'
-            item['name'] = item_name
+            x['name'] = item_name
             print(x)
             proxies.append(x)
     print(f'Dedupicate success, remove {len(lines) - len(proxies)} duplicate proxies')
