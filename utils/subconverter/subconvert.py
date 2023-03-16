@@ -300,10 +300,10 @@ def deduplicate(clash_provider,
   
     for server in servers:
         try:
-            add_list[server] = ['server'][:keep_nodes]
+            servers[server] = [server][:keep_nodes]
         except Exception:
-            add_list[server] = ['server']
-        for x in add_list:
+            servers[server] = [server]
+        for x in servers:
             proxies.append(x)
     print(f'Dedupicate success, remove {len(lines)-len(proxies)} duplicate proxies')
     print(f'Output amount: {len(proxies)}')
