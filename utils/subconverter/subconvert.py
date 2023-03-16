@@ -267,7 +267,7 @@ def deduplicate(clash_provider,
         except Exception:
             add_list = servers[server]
         for x in add_list:        
-            item_name = x['name']  
+            item_name = str(x['name']) 
             for k, v in mapping.items():
                 if k in item_name:
                     item_name = v
