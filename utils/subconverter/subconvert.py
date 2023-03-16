@@ -308,11 +308,8 @@ def deduplicate(clash_provider,
     print(f'Dedupicate success, remove {len(lines)-len(proxies)} duplicate proxies')
     print(f'Output amount: {len(proxies)}')
     proxie = []
-    for pr in proxies:
-        for x in pr:
-            pr.append(x)
-    print(pr)
-    proxie = name(pr)
+    print(proxies)
+    proxie = name(proxies)
 
     output = yaml.dump({'proxies': proxie}, default_flow_style=False, sort_keys=False, allow_unicode=True, indent=2)
     return output
