@@ -351,7 +351,10 @@ def resolve_address(address):
         return address
     except socket.error:
         # 如果不是IP地址，则转换为IP地址
-        return socket.gethostbyname(address)
+	try:
+            return socket.gethostbyname(address)
+	except:
+	    return address
 
 
 def base64_decode(content):
