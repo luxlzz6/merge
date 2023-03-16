@@ -278,11 +278,11 @@ def deduplicate(clash_provider,
         for k, v in mapping.items():
             if k in item_name:
                 item_name = v
-                print(item_name)
                 break
         else:
             item_name = '其他'
         item['name'] = item_name
+        print(item['name'])
     print(proxies)
     output = yaml.dump({'proxies': proxies}, default_flow_style=False, sort_keys=False, allow_unicode=True, indent=2)
     return output
