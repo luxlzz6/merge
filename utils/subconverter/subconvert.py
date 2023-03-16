@@ -251,7 +251,30 @@ def deduplicate(clash_provider,keep_nodes=1): # Proxies deduplicate. If proxies 
     print(f'Dedupicate success, remove {len(lines)-len(proxies)} duplicate proxies')
     print(f'Output amount: {len(proxies)}')
     #print(proxies)
-
+    mapping = {'港':'香港', 'HK':'香港', 'Hong Kong':'香港', 
+			 '坡':'新加坡','SG':'新加坡',
+			 'JP':'日本','日':'日本',
+			 '台':'台湾','TW':'台湾',
+			 '韩':'韩国','KR':'韩国',
+			 'US':'美国','美':'美国',
+			 'CA':'加拿大','加':'加拿大',
+			 '欧':'欧洲','印':'印度','IN':'印度',
+			 'GB':'英国','英':'英国',
+			 'FR':'法国','法':'法国',
+			 'DE':'德国','德':'德国',
+			 'CN':'中国','中国':'中国',
+			 'AU':'澳大利亚','澳':'澳大利亚',
+			 'RU':'俄罗斯','俄':'俄罗斯','RELAY':'其他','NOWHERE':'未知' }
+    for item in proxies:
+        item_name = item['name']
+		for k, v in mapping.items():
+			if k in item_name:
+				item_name = v
+				break
+		else:
+			item_name = '其他'
+        item['name'] = item_name
+    
     output = yaml.dump({'proxies': proxies}, default_flow_style=False, sort_keys=False, allow_unicode=True, indent=2)
     return output
 
