@@ -280,9 +280,9 @@ def deduplicate(clash_provider,
             output = clash_provider
             return output
 
-    servers = []
+    servers = {}
     for proxy in proxies:
-        server = str(proxy['server']) # assign remote server
+        server = proxy['server'] # assign remote server
         if server.replace('.','').isdigit():
             ip = server
         else:
@@ -290,10 +290,11 @@ def deduplicate(clash_provider,
                 ip = socket.gethostbyname(server)
             except Exception:
                 ip = server
+
         if ip in servers:
-            servers.append(str(proxy)) # add proxy to its remote server list
+            servers[ip].append(proxy) # add proxy to its remote server list
         elif server not in servers:
-            servers = str(proxy['server']) # init remote server list, add first proxy
+            servers[ip] = [proxy] # init remote server list, add first proxy
    
     proxies = []
   
@@ -307,6 +308,10 @@ def deduplicate(clash_provider,
     print(f'Dedupicate success, remove {len(lines)-len(proxies)} duplicate proxies')
     print(f'Output amount: {len(proxies)}')
     proxie = []
+    for pr in proxies:
+        for x in pr:
+            proxie.append(x)
+                      
     proxie = name(proxies)
 
     output = yaml.dump({'proxies': proxie}, default_flow_style=False, sort_keys=False, allow_unicode=True, indent=2)
