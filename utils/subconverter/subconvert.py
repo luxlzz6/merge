@@ -332,7 +332,7 @@ def name(servers):
                 item_name = '其他'
             x['name'] = item_name
             proxies.append(x)
-    print(proxies)
+            print(proxies)
     return proxies
 
 
@@ -359,7 +359,7 @@ def resolve_address(address):
         try:
             return socket.gethostbyname(address)
         except:
-            return address
+            return ''
 
 
 def base64_decode(content):
