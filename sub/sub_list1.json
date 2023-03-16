@@ -6,5 +6,21 @@
     "url": "https://raw.githubusercontent.com/pojiezhiyuanjun/2023/main/0315.txt",
     "update_method": "change_date",
     "enabled": true
+  },
+  {
+    "id": 3,
+    "remarks": "freefq/free",
+    "site": "https://github.com/freefq/free",
+    "url": "https://raw.githubusercontent.com/freefq/free/master/v2",
+    "update_method": "auto",
+    "enabled": true
+  },
+  {
+    "id": 41,
+    "remarks": "luxl-1379",
+    "site": "https://github.com/luxl-1379/tg/blob/master/sub",
+    "url": "https://raw.githubusercontent.com/luxl-1379/tg/master/sub/tg",
+    "update_method": "auto",
+    "enabled": true
   }
-  ]
+]
