@@ -282,7 +282,7 @@ def deduplicate(clash_provider,
 
     servers = []
     for proxy in proxies:
-        server = proxy['server'] # assign remote server
+        server = str(proxy['server']) # assign remote server
         if server.replace('.','').isdigit():
             ip = server
         else:
@@ -294,7 +294,7 @@ def deduplicate(clash_provider,
         if ip in servers:
             servers.append(proxy) # add proxy to its remote server list
         elif server not in servers:
-            servers = proxy['server'] # init remote server list, add first proxy
+            servers = str(proxy['server']) # init remote server list, add first proxy
    
     proxies = []
   
