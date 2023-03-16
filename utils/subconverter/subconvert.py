@@ -323,7 +323,6 @@ def name(servers):
             server = resolve_address(str(x['server']))
             ip_address = socket.gethostbyname(server)
             ip = str(ip_address)
-            print(ip)
             ip_name = get_location(ip)
             for k, v in mapping.items():
                 if k in ip_name:
@@ -331,9 +330,9 @@ def name(servers):
                     break
             else:
                 item_name = '其他'
-            print(item_name)
             x['name'] = item_name
             proxies.append(x)
+    print(proxies)
     return proxies
 
 
