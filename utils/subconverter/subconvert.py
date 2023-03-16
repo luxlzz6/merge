@@ -321,9 +321,15 @@ def name(servers):
         for x in add_list:
             item_name = str(x['name'])
             server = resolve_address(str(x['server']))
-            ip_address = socket.gethostbyname(server)
+            try:
+                ip_address = socket.gethostbyname(server)
+            except Exception:
+                ip_address = server
             ip = str(ip_address)
-            ip_name = get_location(ip)
+            try:
+                ip_name = get_location(ip)
+            except Exception:
+                ip_name = 'None'
             for k, v in mapping.items():
                 if k in ip_name:
                     item_name = v
