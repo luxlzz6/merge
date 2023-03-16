@@ -297,6 +297,7 @@ def deduplicate(clash_provider,
             servers[ip] = [proxy] # init remote server list, add first proxy
    
     proxies = []
+    print(servers)
     for server in servers:
         try:
             add_list = servers[server][:keep_nodes]
@@ -310,7 +311,6 @@ def deduplicate(clash_provider,
     result_dict = {}
     for index, item in enumerate(proxies):
         result_dict[index+1] = [item]
-    print(servers)
     proxie = name(result_dict)
 
     output = yaml.dump({'proxies': proxie}, default_flow_style=False, sort_keys=False, allow_unicode=True, indent=2)
