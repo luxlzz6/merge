@@ -367,6 +367,8 @@ def name(servers):
                 item_name = '其他'
             x['name'] = item_name
             proxies.append(x)
+    for i, item in enumerate(proxies):
+        item['name'] += f" {i+1}"
     return proxies
 
 
