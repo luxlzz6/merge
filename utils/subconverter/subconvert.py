@@ -336,7 +336,8 @@ def name(servers):
             add_list = servers[server]
         for x in add_list:
             item_name = str(x['name'])
-            server = resolve_address(str(x['server']))
+            se = str(x['server'])
+            server = resolve_address(se)
             try:
                 ip_address = socket.gethostbyname(server)
             except Exception:
@@ -353,6 +354,7 @@ def name(servers):
             else:
                 item_name = '其他'
             x['name'] = item_name
+            x['server'] = se
             proxies.append(x)
     return proxies
 
