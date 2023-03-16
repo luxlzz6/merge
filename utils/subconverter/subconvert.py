@@ -306,7 +306,7 @@ mapping = {'AD': '安道尔', 'AE': '阿联酋', 'AF': '阿富汗', 'AG': '安�
            'RELAY': '其他', 'None': '未知'}
 # 使用多线程处理所有节点
 def name(servers):
-    with ThreadPoolExecutor(max_workers=1000) as executor:
+    with ThreadPoolExecutor(max_workers=5) as executor:
         for node in servers:
             executor.submit(name, node)
             
