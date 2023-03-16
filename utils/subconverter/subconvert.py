@@ -274,10 +274,11 @@ def deduplicate(clash_provider,
                'RU': '俄罗斯', '俄': '俄罗斯', 'RELAY': '其他', 'NOWHERE': '未知'}
     for item in proxies:
         item_name = item['name']
-        print(item_name)
+        
         for k, v in mapping.items():
             if k in item_name:
                 item_name = v
+                print(item_name)
                 break
         else:
             item_name = '其他'
