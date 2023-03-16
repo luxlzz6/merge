@@ -331,6 +331,7 @@ def name(servers):
                     break
             else:
                 item_name = '其他'
+            print(item_name)
             x['name'] = item_name
             proxies.append(x)
     return proxies
