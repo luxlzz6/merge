@@ -290,9 +290,8 @@ def deduplicate(clash_provider,
                 ip = socket.gethostbyname(server)
             except Exception:
                 ip = server
-        print(servers)
         if ip in servers:
-            servers.append(proxy) # add proxy to its remote server list
+            servers.append(str(proxy)) # add proxy to its remote server list
         elif server not in servers:
             servers = str(proxy['server']) # init remote server list, add first proxy
    
