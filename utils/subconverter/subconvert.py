@@ -283,6 +283,7 @@ def deduplicate(clash_provider,
             item_name = '其他'
         item['name'] = item_name
         print(item['name'])
+    print('11111')
     print(proxies)
     output = yaml.dump({'proxies': proxies}, default_flow_style=False, sort_keys=False, allow_unicode=True, indent=2)
     return output
