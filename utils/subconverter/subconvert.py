@@ -311,7 +311,7 @@ def deduplicate(clash_provider,
     for pr in proxies:
         for x in pr:
             proxie.append(x)
-                      
+    print(proxie)
     proxie = name(proxies)
 
     output = yaml.dump({'proxies': proxie}, default_flow_style=False, sort_keys=False, allow_unicode=True, indent=2)
