@@ -238,28 +238,6 @@ def deduplicate(clash_provider,
             servers[ip].append(proxy)  # add proxy to its remote server list
         elif server not in servers:
             servers[ip] = [proxy]  # init remote server list, add first proxy
-
-    proxies = []
-    for server in servers:
-        # if len(servers[server]) > 3: # if proxy amount is greater than 4 then just add 4 proxies
-        #     add_list = servers[server][:3]
-        #     for add in add_list:
-        #         proxies.append(add)
-        # else:
-        #     add_list = servers[server] # if proxy amount is less than 4 then add all proxies
-        #     for add in add_list:
-        #         proxies.append(add)
-        try:
-            add_list = servers[server][:keep_nodes]
-        except Exception:
-            add_list = servers[server]
-        for x in add_list:
-            print(x)
-            print('测试')
-            proxies.append(x)
-    print(f'Dedupicate success, remove {len(lines) - len(proxies)} duplicate proxies')
-    print(f'Output amount: {len(proxies)}')
-    # print(proxies)
     mapping = {'港': '香港', 'HK': '香港', 'Hong Kong': '香港',
                '坡': '新加坡', 'SG': '新加坡',
                'JP': '日本', '日': '日本',
@@ -274,19 +252,36 @@ def deduplicate(clash_provider,
                'CN': '中国', '中国': '中国',
                'AU': '澳大利亚', '澳': '澳大利亚',
                'RU': '俄罗斯', '俄': '俄罗斯', 'RELAY': '其他', 'NOWHERE': '未知'}
-    for item in proxies:
-        item_name = item['name']
-        
-        for k, v in mapping.items():
-            if k in item_name:
-                item_name = v
-                break
-        else:
-            item_name = '其他'
-        item['name'] = item_name
-        print(item['name'])
-    print('11111')
-    print(proxies)
+    proxies = []
+    for server in servers:
+        # if len(servers[server]) > 3: # if proxy amount is greater than 4 then just add 4 proxies
+        #     add_list = servers[server][:3]
+        #     for add in add_list:
+        #         proxies.append(add)
+        # else:
+        #     add_list = servers[server] # if proxy amount is less than 4 then add all proxies
+        #     for add in add_list:
+        #         proxies.append(add)
+        try:
+            add_list = servers[server][:keep_nodes]
+        except Exception:
+            add_list = servers[server]
+        for x in add_list:        
+            for item in x:
+                item_name = item['name']  
+                for k, v in mapping.items():
+                    if k in item_name:
+                        item_name = v
+                        break
+            else:
+                item_name = '其他'
+            item['name'] = item_name
+            print(x)
+            proxies.append(x)
+    print(f'Dedupicate success, remove {len(lines) - len(proxies)} duplicate proxies')
+    print(f'Output amount: {len(proxies)}')
+    # print(proxies)
+
     output = yaml.dump({'proxies': proxies}, default_flow_style=False, sort_keys=False, allow_unicode=True, indent=2)
     return output
 
