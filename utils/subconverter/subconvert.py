@@ -345,7 +345,7 @@ def get_location(ip_address):
         # 返回国家信息
         return data.get("country")
     else:
-        return None
+        return 'None'
 
 
 def resolve_address(address):
@@ -359,7 +359,7 @@ def resolve_address(address):
         try:
             return socket.gethostbyname(address)
         except:
-            return ''
+            return address
 
 
 def base64_decode(content):
