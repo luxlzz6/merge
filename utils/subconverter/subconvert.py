@@ -310,6 +310,7 @@ def deduplicate(clash_provider,
     result_dict = {}
     for index, item in enumerate(proxies):
         result_dict[index+1] = [item]
+    pribt(result_dict)
     proxie = name(result_dict)
 
     output = yaml.dump({'proxies': proxie}, default_flow_style=False, sort_keys=False, allow_unicode=True, indent=2)
