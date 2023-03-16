@@ -250,6 +250,7 @@ def deduplicate(clash_provider,keep_nodes=1): # Proxies deduplicate. If proxies 
             proxies.append(x)
     print(f'Dedupicate success, remove {len(lines)-len(proxies)} duplicate proxies')
     print(f'Output amount: {len(proxies)}')
+    print(proxies)
 
     output = yaml.dump({'proxies': proxies}, default_flow_style=False, sort_keys=False, allow_unicode=True, indent=2)
     return output
