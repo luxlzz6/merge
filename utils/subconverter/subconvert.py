@@ -332,16 +332,16 @@ def deduplicate(clash_provider,
     return output
 
 
-def URL2IP(server):
-   for oneurl in server:
-       url=str(oneurl.strip())[7:]
-       print (url)
-       try:
-           ip =socket.gethostbyname(url)
-           print (ip)
-           return ip
-       except:
-        print ("this URL 2 IP ERROR ")
+def get_location(ip_address):
+    # 发送HTTP请求获取IP地址归属地
+    response = requests.get(f"https://ipinfo.io/{ip_address}")
+    if response.status_code == 200:
+        # 解析JSON格式的响应数据
+        data = response.json()
+        # 返回国家信息
+        return data.get("country")
+    else:
+        return None
 
 def resolve_address(address):
     # 判断地址类型
