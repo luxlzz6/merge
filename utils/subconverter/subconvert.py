@@ -310,7 +310,6 @@ def deduplicate(clash_provider,
     result_dict = {}
     for index, item in enumerate(proxies):
         result_dict[index+1] = [item]
-    print(result_dict)
     proxie = name(result_dict)
 
     output = yaml.dump({'proxies': proxie}, default_flow_style=False, sort_keys=False, allow_unicode=True, indent=2)
@@ -341,11 +340,12 @@ def resolve_address(address):
 
 def name(servers):
     proxies=[]
-    for index,server in servers:
+    for server in servers:
         try:
             add_list = servers[server][:keep_nodes]
         except Exception:
             add_list = servers[server]
+        print(add_list)
         for x in add_list:
             item_name = str(x['name'])
             se = str(x['server'])
@@ -365,7 +365,7 @@ def name(servers):
                     break
             else:
                 item_name = '其他'
-            x['name'] = f'{item_name} {index}'
+            x['name'] = item_name
             proxies.append(x)
     return proxies
 
