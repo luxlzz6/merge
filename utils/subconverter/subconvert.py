@@ -318,14 +318,14 @@ def deduplicate(clash_provider,
 
 # 使用多线程处理所有节点
 def name(servers):
-    with ThreadPoolExecutor(max_workers=10) as executor:
+    with ThreadPoolExecutor(max_workers=100) as executor:
         for node in servers:
             executor.submit(name, node)
  
 
 # 使用多线程处理所有节点
 def get_location(ip_address):
-    with ThreadPoolExecutor(max_workers=10) as executor:
+    with ThreadPoolExecutor(max_workers=100) as executor:
         for node in ip_address:
             executor.submit(name, node)
             
@@ -334,14 +334,14 @@ def get_location(ip_address):
 
 # 使用多线程处理所有节点
 def resolve_address(address):
-    with ThreadPoolExecutor(max_workers=10) as executor:
+    with ThreadPoolExecutor(max_workers=100) as executor:
         for node in address:
             executor.submit(name, node)
 
 
 def name(servers):
     proxies=[]
-    for server in servers:
+    for index,server in servers:
         try:
             add_list = servers[server][:keep_nodes]
         except Exception:
@@ -365,7 +365,7 @@ def name(servers):
                     break
             else:
                 item_name = '其他'
-            x['name'] = item_name
+            x['name'] = f'{item_name} {index}'
             proxies.append(x)
     return proxies
 
