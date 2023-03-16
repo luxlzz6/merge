@@ -296,14 +296,16 @@ def deduplicate(clash_provider,
         elif server not in servers:
             servers[ip] = [proxy] # init remote server list, add first proxy
 
+    for proxy in servers:
+        proxiess.append(proxy)   
     proxies = []
   
-    for server in servers:
+    for server in proxiess:
         try:
-            servers[server] = [server][:keep_nodes]
+            add_list = servers[server][:keep_nodes]
         except Exception:
-            servers[server] = [server]
-        for x in servers:
+            add_list = servers[server]
+        for x in add_list:
             proxies.append(x)
     print(f'Dedupicate success, remove {len(lines)-len(proxies)} duplicate proxies')
     print(f'Output amount: {len(proxies)}')
