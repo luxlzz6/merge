@@ -306,10 +306,27 @@ mapping = {'AD': '安道尔', 'AE': '阿联酋', 'AF': '阿富汗', 'AG': '安�
            'RELAY': '其他', 'None': '未知'}
 # 使用多线程处理所有节点
 def name(servers):
-    with ThreadPoolExecutor(max_workers=5) as executor:
+    with ThreadPoolExecutor(max_workers=10) as executor:
         for node in servers:
             executor.submit(name, node)
+ 
+
+# 使用多线程处理所有节点
+def get_location(ip_address):
+    with ThreadPoolExecutor(max_workers=10) as executor:
+        for node in ip_address:
+            executor.submit(name, node)
             
+
+         
+
+# 使用多线程处理所有节点
+def resolve_address(address):
+    with ThreadPoolExecutor(max_workers=10) as executor:
+        for node in address:
+            executor.submit(name, node)
+
+
 def name(servers):
     proxies=[]
     for server in servers:
