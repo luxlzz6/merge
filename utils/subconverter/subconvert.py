@@ -359,7 +359,6 @@ def name(servers):
                 ip_name = get_location(ip)
             except Exception:
                 ip_name = 'None'
-            print(ip_name)
             for k, v in mapping.items():
                 if k in ip_name:
                     item_name = v
