@@ -380,6 +380,11 @@ def get_location(ip_address):
         # 解析JSON格式的响应数据
         data = response.json()
         # 返回国家信息
+        if data.get("country") is None:
+            return 'NO'
+        # 否则返回国家信息
+        else:
+            return data.get("country")
         return data.get("country")
     else:
         return 'NO'
