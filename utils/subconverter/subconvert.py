@@ -63,7 +63,7 @@ mapping = {'AD': '安道尔', 'AE': '阿联酋', 'AF': '阿富汗', 'AG': '安�
            'VC': '圣文森特和格林纳丁斯', 'VE': '委内瑞拉', 'VG': '英属维尔京群岛', 'VI': '美属维尔京群岛', 'VN': '越南',
            'VU': '瓦努阿图', 'WF': '瓦利斯和富图纳群岛', 'WS': '萨摩亚', 'YE': '也门', 'YT': '马约特',
            'ZA': '南非', 'ZM': '赞比亚', 'ZW': '津巴布韦',
-           'RELAY': '其他', 'None': '未知'}
+           'NO': '其他', 'None': '其他'}
 def convert(subscription, target, other_config={}):
     """Wrapper for subconverter
     subscription: subscription url or content string or local file path, add url support.
@@ -358,7 +358,7 @@ def name(servers):
             try:
                 ip_name = get_location(ip)
             except Exception:
-                ip_name = 'None'
+                ip_name = 'NO'
             for k, v in mapping.items():
                 if k in ip_name:
                     item_name = v
