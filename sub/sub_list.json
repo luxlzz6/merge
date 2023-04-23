@@ -96,6 +96,14 @@
     "enabled": true
   },
   {
+    "id": 42,
+    "remarks": "nodefree",
+    "site": "https://nodefree.org",
+    "url": "https://nodefree.org/dy/2023/04/20230423.txt",
+    "update_method": "auto",
+    "enabled": true
+  },
+  {
     "id": 40,
     "remarks": "ClashNode",
     "site": "https://clashnode.com/f/freenode",
