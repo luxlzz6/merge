@@ -56,7 +56,11 @@ class update():
             file.close()
 
     def change_date(self,id,current_url):
-        if id == 40:
+        if id == 39:
+            new_url = datetime.today().strftime('https://clashnode.com/wp-content/uploads/%Y/%m/%Y%m%d.txt')
+        if id == 41:
+            new_url = datetime.today().strftime('https://clashnode.com/wp-content/uploads/%Y/%m/%Y%m%d.txt')
+        if id == 42:
             new_url = datetime.today().strftime('https://clashnode.com/wp-content/uploads/%Y/%m/%Y%m%d.txt')
         if id == 36:
             today = datetime.today().strftime('%Y%m%d')
