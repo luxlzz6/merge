@@ -16,14 +16,6 @@
     "enabled": true
   },
   {
-    "id": 39,
-    "remarks": "peasoft/NoMoreWalls",
-    "site": "https://github.com/peasoft/NoMoreWalls",
-    "url": "https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/list.txt",
-    "update_method": "auto",
-    "enabled": true
-  },
-  {
     "id": 41,
     "remarks": "luxl-1379",
     "site": "https://github.com/luxl-1379/tg/blob/master/sub",
