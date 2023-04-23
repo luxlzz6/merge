@@ -67,8 +67,11 @@ class merge():
         # print(''.join(content_list))
 
         content = convert(''.join(content_list),'url',self.format_config)
+        print('1111111111111')
         content_clash = convert(''.join(content_list),'clash_provider',self.format_config)
+        print('22222222222222')
         content_base64 = convert(''.join(content_list), 'base64',self.format_config)
+        print('33333333333')
 
         def content_write(file, output_type):
             file = open(file, 'w+', encoding = 'utf-8')
