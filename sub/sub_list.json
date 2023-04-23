@@ -81,9 +81,17 @@
   },
   {
     "id": 39,
-    "remarks": "peasoft/NoMoreWalls",
-    "site": "https://github.com/peasoft/NoMoreWalls",
-    "url": "https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/list.txt",
+    "remarks": "clashnode",
+    "site": "https://clashnode.com",
+    "url": "https://clashnode.com/wp-content/uploads/2023/04/20230423.txt",
+    "update_method": "auto",
+    "enabled": true
+  },
+  {
+    "id": 39,
+    "remarks": "clashnode",
+    "site": "https://clashnode.com",
+    "url": "https://clashnode.com/wp-content/uploads/2023/04/20230423.txt",
     "update_method": "auto",
     "enabled": true
   },
