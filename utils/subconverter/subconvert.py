@@ -382,7 +382,7 @@ def get_location(ip_address):
         # 返回国家信息
         return data.get("country")
     else:
-        return 'None'
+        return 'NO'
 
 
 def resolve_address(address):
