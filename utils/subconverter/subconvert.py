@@ -307,24 +307,25 @@ def deduplicate(clash_provider,
     print(f'Dedupicate success, remove {len(lines)-len(proxies)} duplicate proxies')
     print(f'Output amount: {len(proxies)}')
     proxie = []
+    
     result_dict = {}
     for index, item in enumerate(proxies):
         result_dict[index+1] = [item]
     proxie = name(result_dict)
-
+    print(proxie)
     output = yaml.dump({'proxies': proxie}, default_flow_style=False, sort_keys=False, allow_unicode=True, indent=2)
     return output
 
 # 使用多线程处理所有节点
 def name(servers):
-    with ThreadPoolExecutor(max_workers=100) as executor:
+    with ThreadPoolExecutor(max_workers=10) as executor:
         for node in servers:
             executor.submit(name, node)
  
 
 # 使用多线程处理所有节点
 def get_location(ip_address):
-    with ThreadPoolExecutor(max_workers=100) as executor:
+    with ThreadPoolExecutor(max_workers=10) as executor:
         for node in ip_address:
             executor.submit(name, node)
             
@@ -333,7 +334,7 @@ def get_location(ip_address):
 
 # 使用多线程处理所有节点
 def resolve_address(address):
-    with ThreadPoolExecutor(max_workers=100) as executor:
+    with ThreadPoolExecutor(max_workers=10) as executor:
         for node in address:
             executor.submit(name, node)
 
