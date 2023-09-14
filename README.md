@@ -1,4 +1,4 @@
-# V2RayAggregator
+# merger
 
 ## 导言
 
