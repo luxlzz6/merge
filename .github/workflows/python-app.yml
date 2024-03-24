@@ -20,7 +20,7 @@ jobs:
       with:
         python-version: '3.x'
     - name: 更新pip
-      run: python -m pip install --upgrade pip
+      run: python -m pip install --upgrade pip setuptools wheel
     - name: 加载缓存
       uses: actions/cache@v2
       with:
